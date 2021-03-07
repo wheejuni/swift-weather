@@ -1,5 +1,5 @@
 //
-//  CountryCell.swift
+//  CityDetailCell.swift
 //  swift-weather
 //
 //  Created by quo.barlow on 2021/03/07.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class CountryCell: UITableViewCell {
+class CityDetailCell: UITableViewCell {
     
-    var countryCode: String = ""
-    
-    @IBOutlet var flag: UIImageView!
-    @IBOutlet var countryName: UILabel!
+    @IBOutlet var weatherImage: UIImageView!
+    @IBOutlet var cityNameLabel: UILabel!
+    @IBOutlet var temperatureDescription: UILabel!
+    @IBOutlet var precipitationProbability: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

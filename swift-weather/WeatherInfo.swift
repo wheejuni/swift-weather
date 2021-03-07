@@ -16,7 +16,30 @@ struct WeatherInfo: Codable {
     enum CodingKeys: String, CodingKey {
         case cityName = "city_name"
         case state = "state"
-        case celcius = "celcius"
+        case celcius = "celsius"
         case rainfallProbability = "rainfall_probability"
+    }
+    
+    func getTemperatureLabelContent() -> String {
+        let fahrenheit = (self.celcius * 9 / 5) + 32
+        
+        return "\(self.celcius)°C / \(fahrenheit)°F"
+    }
+    
+    func getPrecipitationProbabilityLabelContent() -> String {
+        return "강수확률 \(self.rainfallProbability)%"
+    }
+    
+    func getWeatherAssetByState() -> String {
+        switch self.state {
+        case 10:
+            return "snowy"
+        case 11:
+            return "rainy"
+        case 12:
+            return "cloudy"
+        default:
+            return "sunny"
+        }
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     let countryCellId = "country"
+    let countrySegueId = "countrydetail"
+    
     var countries: [String] = []
     
     @IBOutlet weak var countriesTable: UITableView!
@@ -32,8 +34,27 @@ class ViewController: UIViewController {
         
         countryCell.flag.image = UIImage(named: self.getFlagAssetNamespace(self.countries[indexPath.row]))
         countryCell.countryName.text = self.getFullyQualifiedCountryName(indexPath.row)
+        countryCell.countryCode = self.countries[indexPath.row]
         
         return countryCell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != self.countrySegueId {
+            return
+        }
+        
+        guard let originalCell: CountryCell = sender as? CountryCell else {
+            return
+        }
+        
+        guard let destinationController: CountryListController = segue.destination as? CountryListController else {
+            return
+        }
+        
+        originalCell.isSelected = false
+        destinationController.countryName = originalCell.countryName.text
+        destinationController.countryCode = originalCell.countryCode
     }
     
     private func getFlagAssetNamespace(_ countryCode: String) -> String {
