@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5D4BF1425F4856800AEDEBA /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4BF1325F4856800AEDEBA /* WeatherInfo.swift */; };
+		E5D4BF1725F492E100AEDEBA /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4BF1625F492E100AEDEBA /* CountryCell.swift */; };
 		E5D8931625F483C8002A9544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8931525F483C8002A9544 /* AppDelegate.swift */; };
 		E5D8931825F483C8002A9544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8931725F483C8002A9544 /* SceneDelegate.swift */; };
 		E5D8931A25F483C8002A9544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8931925F483C8002A9544 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5D4BF1325F4856800AEDEBA /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		E5D4BF1625F492E100AEDEBA /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		E5D8931225F483C8002A9544 /* swift-weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D8931525F483C8002A9544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D8931725F483C8002A9544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				E5D8931E25F483C9002A9544 /* Assets.xcassets */,
 				E5D8932025F483C9002A9544 /* LaunchScreen.storyboard */,
 				E5D8932325F483C9002A9544 /* Info.plist */,
+				E5D4BF1325F4856800AEDEBA /* WeatherInfo.swift */,
+				E5D4BF1625F492E100AEDEBA /* CountryCell.swift */,
 			);
 			path = "swift-weather";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5D4BF1425F4856800AEDEBA /* WeatherInfo.swift in Sources */,
 				E5D8931A25F483C8002A9544 /* ViewController.swift in Sources */,
+				E5D4BF1725F492E100AEDEBA /* CountryCell.swift in Sources */,
 				E5D8931625F483C8002A9544 /* AppDelegate.swift in Sources */,
 				E5D8931825F483C8002A9544 /* SceneDelegate.swift in Sources */,
 			);
